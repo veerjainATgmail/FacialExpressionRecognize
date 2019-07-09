@@ -5,7 +5,8 @@ import numpy as np
 from numpy import *
 from keras.models import load_model
 import tensorflow as tf
-graph = tf.get_default_graph()
+graph = tf.compat.v1.get_default_graph()
+
 
 class Solver:
     # 模型加载

@@ -40,8 +40,6 @@ class App extends React.Component {
         <footer>
           <div className={classes.center}>
           <h3>
-            <span>Author:<a href="https://github.com/XUranus">XUranus</a></span>
-            &nbsp;&nbsp;&nbsp;
             <span>Powered By <a href="https://github.com/justadudewhohacks/face-api.js">face-api.js</a></span>
           </h3>
           </div>

@@ -33,7 +33,7 @@ def receive_img():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=5000,debug=True)
+    app.run(host='localhost',port=5000,debug=True)
     
     #如果不是本机运行 需要SSL证书
     #app.run(host='0.0.0.0',port=8080,debug=True,ssl_context=('*.crt','*.key'))
