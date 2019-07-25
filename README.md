@@ -17,28 +17,18 @@
 后端完成表情分类的工作，拿到RGBA数组转化成RGB矩阵，压缩，灰化交给模型分类。
 
 ### 关于构建与部署
-`ui`中是react项目，构建后可独立运行，需要先配置`/ui/src/CameraSection.js`中的flask服务器地址，之后就可构建。
+`ui`中是react项目，<b>构建后可独立运行</b>。
+
+本地模式
 ```
 cd ui
 yarn install
-yarn build
-```
-把build文件夹拷贝到web服务器目录中，（由于最新的chrome已经禁止了不安全的连接开启userMedia，必须要用https或者在localhost下，否则webcam无法使用，而firefox似乎还可以）
-
-如果用本地模式，只需要
-```
-sudo npm -g i serve
-serve -s build
+yarn start
 ```
 
-之后配置`server/server.py`中的flask服务器地址和端口号，需要和上述前端配置一致。要保证已经安装了`keras`,`PIL`,`tensorflow`,`flask`
-```
-cd server
-python server.py
-```
 此时打开浏览器，输入地址即可
 
 ### 效果
 ![](demo.gif)
 
- - 2019.5.11 增加了tfjs本地模式，只需一个静态服务器即可部署
+
